@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>✨ Special Wishes For You ✨</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="gate-page">
+    <!-- Starfield canvas -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- Floating particles -->
+    <div id="particles"></div>
+
+    <!-- Shooting stars -->
+    <div class="shooting-star s1"></div>
+    <div class="shooting-star s2"></div>
+    <div class="shooting-star s3"></div>
+
+    <!-- Main card -->
+    <div class="gate-container" id="gateContainer">
+      <div class="cosmic-title">
+        <p class="subtitle-top">✦ The universe awaits a command ✦</p>
+        <h1 class="main-title">
+          Who is the star of<br />this special celebration?
+        </h1>
+      </div>
+
+      <div class="input-section">
+        <label class="wishes-label">🎂 Wishes for...</label>
+        <div class="input-wrapper" id="inputWrapper">
+          <input
+            type="text"
+            id="nameInput"
+            placeholder="Enter the secret name..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <div class="input-glow"></div>
+        </div>
+        <div class="hint-text" id="hintText"></div>
+        <div class="error-text" id="errorText">
+          ❌ Hmm... the stars don't recognise that name. Try again!
+        </div>
+      </div>
+
+      <button class="orb-btn" id="orbBtn" onclick="checkName()">
+        <div class="orb-inner">
+          <span class="orb-icon">✨</span>
+        </div>
+        <div class="orb-ring r1"></div>
+        <div class="orb-ring r2"></div>
+        <div class="orb-ring r3"></div>
+      </button>
+
+      <p class="access-label" id="accessLabel">
+        Tap the orb or press Enter to reveal ✨
+      </p>
+    </div>
+
+    <!-- Access Granted Overlay -->
+    <div class="access-overlay" id="accessOverlay">
+      <div class="access-content">
+        <div class="checkmark-circle">
+          <svg viewBox="0 0 52 52" class="checkmark-svg">
+            <circle
+              class="checkmark-circle-bg"
+              cx="26"
+              cy="26"
+              r="25"
+              fill="none"
+            />
+            <path
+              class="checkmark-check"
+              fill="none"
+              d="M14.1 27.2l7.1 7.2 16.7-16.8"
+            />
+          </svg>
+        </div>
+        <h2 class="granted-text">ACCESS GRANTED</h2>
+        <p class="granted-sub">Welcome to the celebration... 🌟</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

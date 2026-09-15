@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎉 Happy Birthday, Sudhanshu! 🎉</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="celebrate-page">
+    <!-- Starfield -->
+    <canvas id="starCanvas"></canvas>
+
+    <!-- Confetti canvas -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <!-- Balloons -->
+    <div id="balloons"></div>
+
+    <!-- Floating hearts -->
+    <div id="hearts"></div>
+
+    <!-- Hidden audio player -->
+    <audio id="bdayAudio" loop preload="auto">
+      <!-- We'll use a royalty-free Happy Birthday instrumental from a public CDN -->
+      <source
+        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+        type="audio/mp3"
+      />
+    </audio>
+
+    <!-- Main celebration content -->
+    <div class="celebrate-container" id="celebrateContainer">
+      <!-- ── TOP HEADER ── -->
+      <div class="bday-header">
+        <p class="bday-top-text reveal-text" style="--delay: 0.1s">
+          🎊 The Stars Aligned Just For Sudhanshu 🎊
+        </p>
+        <h1
+          class="bday-name reveal-text"
+          style="--delay: 0.4s"
+          id="birthdayName"
+        >
+          Happy Birthday, Sudhanshu! 🎉
+        </h1>
+        <p class="bday-subtitle reveal-text" style="--delay: 0.65s">
+          Today the entire universe celebrates YOU ✨
+        </p>
+      </div>
+
+      <!-- ── DUAL PHOTO SECTION ── -->
+      <div class="dual-photo-section reveal-scale" style="--delay: 0.85s">
+        <!-- Photo 1 — golden rose ring -->
+        <div class="photo-card card-left">
+          <div class="photo-card-inner">
+            <div class="pc-ring pcr1"></div>
+            <div class="pc-ring pcr2"></div>
+            <img src="photo1.jpg" alt="Birthday Star" class="pc-img" />
+            <div class="pc-sparkles"></div>
+          </div>
+          <p class="photo-caption">✨ The Star of the Show ✨</p>
+        </div>
+
+        <!-- Centre divider -->
+        <div class="photo-divider">
+          <div class="divider-icon">🎂</div>
+          <div class="divider-line"></div>
+          <div class="divider-icon">💫</div>
+          <div class="divider-line"></div>
+          <div class="divider-icon">🎈</div>
+        </div>
+
+        <!-- Photo 2 — cyan/purple ring -->
+        <div class="photo-card card-right">
+          <div class="photo-card-inner">
+            <div class="pc-ring pcr3"></div>
+            <div class="pc-ring pcr4"></div>
+            <img src="photo2.jpg" alt="Birthday Star" class="pc-img pc-img2" />
+            <div class="pc-sparkles pc-sparkles2"></div>
+          </div>
+          <p class="photo-caption">💖 Forever Radiant 💖</p>
+        </div>
+      </div>
+
+      <!-- ── BIRTHDAY MESSAGE ── -->
+      <div class="message-box reveal-text" style="--delay: 1.1s">
+        <div class="msg-crown">👑</div>
+        <p class="bday-message">
+          On this beautiful day, the universe pauses<br />
+          to shine its brightest light on
+          <span class="name-highlight" id="nameSpan">you</span> — <br />
+          a person whose smile lights up every room,<br />
+          whose laughter is pure magic, and whose heart<br />
+          is the greatest gift this world has ever received.
+        </p>
+        <p class="bday-message-2">
+          May every wish you make today come true,<br />
+          may every dream you carry bloom into reality,<br />
+          and may this birthday mark the beginning of<br />
+          your most beautiful chapter yet. 🌸
+        </p>
+      </div>
+
+      <!-- ── WISH QUOTES ── -->
+      <div class="quote-strip reveal-text" style="--delay: 1.3s">
+        <div class="quote-item">
+          <span class="q-icon">🌟</span>
+          <span class="q-text"
+            >You are rare, you are wonderful, you are irreplaceable</span
+          >
+        </div>
+        <div class="quote-item">
+          <span class="q-icon">🎀</span>
+          <span class="q-text"
+            >Here's to a year full of joy, laughter &amp; dreams coming
+            true</span
+          >
+        </div>
+        <div class="quote-item">
+          <span class="q-icon">🥂</span>
+          <span class="q-text"
+            >Wishing you all the happiness your heart can hold</span
+          >
+        </div>
+      </div>
+
+      <!-- ── CAKE SECTION ── -->
+      <div class="cake-section reveal-scale" style="--delay: 1.5s">
+        <div class="cake-emoji">🎂</div>
+        <p class="cake-text">Close your eyes & make a wish... 🌠</p>
+        <div class="candles">
+          <div class="candle c-pink"><div class="flame f1"></div></div>
+          <div class="candle c-purple"><div class="flame f2"></div></div>
+          <div class="candle c-gold"><div class="flame f3"></div></div>
+          <div class="candle c-cyan"><div class="flame f4"></div></div>
+          <div class="candle c-pink"><div class="flame f5"></div></div>
+        </div>
+      </div>
+
+      <!-- ── AUDIO CONTROL ── -->
+      <div class="audio-btn-wrap reveal-text" style="--delay: 1.7s">
+        <button class="audio-toggle-btn" id="audioBtn" onclick="toggleAudio()">
+          <span id="audioIcon">🔇</span> Play Birthday Song
+        </button>
+      </div>
+
+      <!-- ── REPLAY BUTTON ── -->
+      <button
+        class="replay-btn reveal-text"
+        style="--delay: 1.85s"
+        onclick="window.location.href = 'index.html'"
+      >
+        🔄 Start Over
+      </button>
+    </div>
+
+    <script src="celebrate.js"></script>
+  </body>
+</html>
